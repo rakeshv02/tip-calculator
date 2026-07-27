@@ -1,36 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tip Calculator — Calculate Tip & Split the Bill | Tabutility</title>
-    <meta name="description" content="Free tip and bill split calculator. Calculate tip amount, split the bill between multiple people, and see exactly what each person owes. Supports custom tip percentages. No sign-up." />
-    <meta name="keywords" content="tip calculator, bill split calculator, split the bill, how much to tip, tip calculator with split, restaurant tip calculator, free tip calculator" />
-    <link rel="canonical" href="https://tip-calculator.tabutility.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tip-calculator.tabutility.com/" />
-    <meta property="og:title" content="Tip Calculator — Calculate Tip & Split the Bill" />
-    <meta property="og:description" content="Calculate tip and split the bill between multiple people. Free, no sign-up." />
-    <meta property="og:site_name" content="Tabutility" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Tip Calculator — Calculate Tip & Split the Bill" />
-    <meta name="twitter:description" content="Calculate tip and split the bill between multiple people. Free, no sign-up." />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧾</text></svg>" />
-    <meta name="robots" content="index, follow" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-78VZWJ5B1W');
-    </script>
-    <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Tip Calculator", "url": "https://tip-calculator.tabutility.com", "description": "Free tip and bill split calculator. Calculate tip amount and split the bill between multiple people.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "provider": { "@type": "Organization", "name": "Tabutility", "url": "https://tabutility.com" } }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tip & Bill Splitter — Tabutility</title>
+<meta name="description" content="Free tip calculator and bill splitter. Calculate tips, split bills between people and find per-person totals instantly."/>
+<meta name="keywords" content="tip calculator, bill splitter, how much to tip, split bill calculator, restaurant tip"/>
+<link rel="canonical" href="https://tip-calculator.tabutility.com/"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>"/>
+<meta property="og:title" content="Tip & Bill Splitter"/>
+<meta property="og:description" content="Calculate tips, split bills between people and find per-person totals instantly."/>
+<meta property="og:url" content="https://tip-calculator.tabutility.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tabutility"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tip & Bill Splitter"/>
+<meta name="twitter:description" content="Calculate tips, split bills between people and find per-person totals instantly."/>
+<meta name="robots" content="index, follow"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tip & Bill Splitter","url":"https://tip-calculator.tabutility.com/","description":"Free tip calculator and bill splitter. Calculate tips, split bills between people and find per-person totals instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://tabutility.com"},{"@type":"ListItem","position":3,"name":"Tip & Bill Splitter","item":"https://tip-calculator.tabutility.com/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much should I tip?","acceptedAnswer":{"@type":"Answer","text":"15–20% is standard in the US; 10–12.5% is common in the UK."}},{"@type":"Question","name":"Can I split between multiple people?","acceptedAnswer":{"@type":"Answer","text":"Yes — enter the number of people and it calculates each person's share."}},{"@type":"Question","name":"Is the Tip Calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}},{"@type":"Question","name":"Does it work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes — works on any device."}}]}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+nav{background:#1e293b;border-bottom:1px solid #334155;padding:14px 24px;display:flex;align-items:center;gap:16px}
+nav a{color:#94a3b8;text-decoration:none;font-size:14px}
+nav a:hover{color:#f1f5f9}
+nav .brand{color:#38bdf8;font-weight:700;font-size:18px}
+.ad-banner{background:#1e293b;border-bottom:1px solid #334155;padding:4px;text-align:center}
+#app{max-width:600px;margin:8px auto;padding:0 16px 40px}
+h1{font-size:26px;font-weight:700;color:#f1f5f9;margin:24px 0 6px;text-align:center}
+.subtitle{color:#94a3b8;font-size:14px;text-align:center;margin-bottom:24px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:24px;margin-bottom:16px}
+label{display:block;font-size:13px;font-weight:600;color:#94a3b8;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em;margin-top:14px}
+label:first-child{margin-top:0}
+.input-group{position:relative}
+.input-prefix{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:16px;color:#64748b;pointer-events:none}
+input[type="number"]{width:100%;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px 14px 12px 28px;color:#f1f5f9;font-size:16px;outline:none;-moz-appearance:textfield;transition:border-color .2s}
+input.no-prefix{padding-left:14px}
+input[type="number"]:focus{border-color:#38bdf8}
+input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none}
+.tip-btns{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+.tip-btn{flex:1;min-width:52px;padding:10px 6px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#94a3b8;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;text-align:center}
+.tip-btn.active,.tip-btn:hover{background:#38bdf8;color:#0f172a;border-color:#38bdf8}
+.cur-btns{display:flex;gap:8px;margin-bottom:14px}
+.cur-btn{padding:8px 18px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#94a3b8;font-size:14px;font-weight:700;cursor:pointer;transition:.2s}
+.cur-btn.active{background:#334155;color:#f1f5f9}
+.results{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.res-item{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:16px;text-align:center}
+.res-item .val{font-size:26px;font-weight:700;color:#38bdf8}
+.res-item .lbl{font-size:12px;color:#94a3b8;margin-top:4px;text-transform:uppercase;letter-spacing:.04em}
+.res-person{background:#0f172a;border:1px solid #38bdf8;border-radius:10px;padding:16px;text-align:center;margin-top:12px}
+.res-person .val{font-size:32px;font-weight:800;color:#34d399}
+.res-person .lbl{font-size:13px;color:#94a3b8;margin-top:4px}
+.custom-tip-wrap{margin-top:8px}
+</style>
+</head>
+<body>
+<nav><span class="brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
+<div class="ad-banner"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<div id="app">
+  <h1>🍽️ Tip & Bill Splitter</h1>
+  <p class="subtitle">Calculate your tip and split the bill instantly</p>
+  <div class="card">
+    <div class="cur-btns">
+      <button class="cur-btn active" id="cur-usd" onclick="setCur('$')">$ USD</button>
+      <button class="cur-btn" id="cur-gbp" onclick="setCur('£')">£ GBP</button>
+      <button class="cur-btn" id="cur-eur" onclick="setCur('€')">€ EUR</button>
+    </div>
+
+    <label>Bill Amount</label>
+    <div class="input-group">
+      <span class="input-prefix" id="prefix-sym">$</span>
+      <input type="number" id="bill" placeholder="0.00" min="0" step="0.01" oninput="calculate()"/>
+    </div>
+
+    <label>Tip %</label>
+    <div class="tip-btns" id="tip-btns">
+      <button class="tip-btn" onclick="setTip(10,this)">10%</button>
+      <button class="tip-btn active" onclick="setTip(15,this)">15%</button>
+      <button class="tip-btn" onclick="setTip(18,this)">18%</button>
+      <button class="tip-btn" onclick="setTip(20,this)">20%</button>
+      <button class="tip-btn" onclick="setTip(25,this)">25%</button>
+    </div>
+    <div class="custom-tip-wrap">
+      <input type="number" id="tip-custom" class="no-prefix" placeholder="Custom tip %" min="0" max="100" step="1" oninput="setCustomTip()" style="width:100%;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px 14px;color:#f1f5f9;font-size:15px;outline:none;margin-top:8px"/>
+    </div>
+
+    <label>Number of People</label>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button onclick="changePeople(-1)" style="width:40px;height:40px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f1f5f9;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center">−</button>
+      <span id="people-count" style="font-size:22px;font-weight:700;min-width:32px;text-align:center">2</span>
+      <button onclick="changePeople(1)" style="width:40px;height:40px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f1f5f9;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center">+</button>
+    </div>
+
+    <div class="results">
+      <div class="res-item"><div class="val" id="r-tip">$0.00</div><div class="lbl">Tip Amount</div></div>
+      <div class="res-item"><div class="val" id="r-total">$0.00</div><div class="lbl">Total Bill</div></div>
+    </div>
+    <div class="res-person">
+      <div class="val" id="r-per">$0.00</div>
+      <div class="lbl">Per Person</div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:24px;margin-bottom:8px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <a href="https://percentage-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Percentage Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
+      </a>
+      <a href="https://discount-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Discount Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
+      </a>
+      <a href="https://sales-tax-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Sales Tax Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
+      </a>
+      <a href="https://hourly-to-salary.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Hourly to Salary</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:8px;margin-bottom:24px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">How much should I tip?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">15–20% is standard in the US; 10–12.5% is common in the UK.</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Can I split between multiple people?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — enter the number of people and it calculates each person's share.</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this free?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — completely free, no sign-up needed.</div>
+    </div>
+    <div style="padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Works on mobile?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — works on any device.</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:8px">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<script>
+let tipPct = 15;
+let people = 2;
+let sym = '$';
+
+function setCur(s) {
+  sym = s;
+  document.getElementById('prefix-sym').textContent = s;
+  document.getElementById('cur-usd').classList.toggle('active', s==='$');
+  document.getElementById('cur-gbp').classList.toggle('active', s==='£');
+  document.getElementById('cur-eur').classList.toggle('active', s==='€');
+  calculate();
+}
+
+function setTip(pct, btn) {
+  tipPct = pct;
+  document.querySelectorAll('.tip-btn').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  document.getElementById('tip-custom').value = '';
+  calculate();
+}
+
+function setCustomTip() {
+  const v = parseFloat(document.getElementById('tip-custom').value);
+  if (!isNaN(v) && v >= 0) {
+    tipPct = v;
+    document.querySelectorAll('.tip-btn').forEach(b=>b.classList.remove('active'));
+  }
+  calculate();
+}
+
+function changePeople(d) {
+  people = Math.max(1, people + d);
+  document.getElementById('people-count').textContent = people;
+  calculate();
+}
+
+function calculate() {
+  const bill = parseFloat(document.getElementById('bill').value) || 0;
+  const tip = bill * tipPct / 100;
+  const total = bill + tip;
+  const perPerson = total / people;
+  const f = n => sym + n.toFixed(2);
+  document.getElementById('r-tip').textContent = f(tip);
+  document.getElementById('r-total').textContent = f(total);
+  document.getElementById('r-per').textContent = f(perPerson);
+}
+</script>
+</body>
 </html>
