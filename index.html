@@ -7,7 +7,6 @@
   <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
 <title>Tip & Bill Splitter — Tabutility</title>
 <meta name="description" content="Free tip calculator and bill splitter. Calculate tips, split bills between people and find per-person totals instantly."/>
 <meta name="keywords" content="tip calculator, bill splitter, how much to tip, split bill calculator, restaurant tip"/>
@@ -29,47 +28,48 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much should I tip?","acceptedAnswer":{"@type":"Answer","text":"15–20% is standard in the US; 10–12.5% is common in the UK."}},{"@type":"Question","name":"Can I split between multiple people?","acceptedAnswer":{"@type":"Answer","text":"Yes — enter the number of people and it calculates each person's share."}},{"@type":"Question","name":"Is the Tip Calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}},{"@type":"Question","name":"Does it work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes — works on any device."}}]}</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8f7f4;color:#0f172a;min-height:100vh}
-nav{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display:flex;align-items:center;gap:16px}
-nav a{color:#64748b;text-decoration:none;font-size:14px}
-nav a:hover{color:#0f172a}
-nav .brand{color:#0f172a;font-weight:700;font-size:18px}
-.ad-banner{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:4px;text-align:center}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+nav{background:#1e293b;border-bottom:1px solid #334155;padding:14px 24px;display:flex;align-items:center;gap:16px}
+nav a{color:#94a3b8;text-decoration:none;font-size:14px}
+nav a:hover{color:#f1f5f9}
+nav .brand{color:#4f46e5;font-weight:700;font-size:18px}
+.ad-banner{background:#1e293b;border-bottom:1px solid #334155;padding:4px;text-align:center}
 #app{max-width:600px;margin:8px auto;padding:0 16px 40px}
-h1{font-size:26px;font-weight:700;color:#0f172a;margin:24px 0 6px;text-align:center}
-.subtitle{color:#64748b;font-size:14px;text-align:center;margin-bottom:24px}
-.card{background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;padding:24px;margin-bottom:16px}
-label{display:block;font-size:13px;font-weight:600;color:#64748b;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em;margin-top:14px}
+h1{font-size:26px;font-weight:700;color:#f1f5f9;margin:24px 0 6px;text-align:center}
+.subtitle{color:#94a3b8;font-size:14px;text-align:center;margin-bottom:24px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:24px;margin-bottom:16px}
+label{display:block;font-size:13px;font-weight:600;color:#94a3b8;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em;margin-top:14px}
 label:first-child{margin-top:0}
 .input-group{position:relative}
 .input-prefix{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:16px;color:#64748b;pointer-events:none}
-input[type="number"]{width:100%;background:#f8f7f4;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px 12px 28px;color:#0f172a;font-size:16px;outline:none;-moz-appearance:textfield;transition:border-color .2s}
+input[type="number"]{width:100%;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px 14px 12px 28px;color:#f1f5f9;font-size:16px;outline:none;-moz-appearance:textfield;transition:border-color .2s}
 input.no-prefix{padding-left:14px}
-input[type="number"]:focus{border-color:#0f172a}
+input[type="number"]:focus{border-color:#4f46e5}
 input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none}
 .tip-btns{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px}
-.tip-btn{flex:1;min-width:52px;padding:10px 6px;border-radius:8px;border:1px solid #e2e8f0;background:#f8f7f4;color:#64748b;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;text-align:center}
-.tip-btn.active,.tip-btn:hover{background:#0f172a;color:#f8f7f4;border-color:#0f172a}
+.tip-btn{flex:1;min-width:52px;padding:10px 6px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#94a3b8;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;text-align:center}
+.tip-btn.active,.tip-btn:hover{background:#4f46e5;color:#0f172a;border-color:#4f46e5}
 .cur-btns{display:flex;gap:8px;margin-bottom:14px}
-.cur-btn{padding:8px 18px;border-radius:8px;border:1px solid #e2e8f0;background:#f8f7f4;color:#64748b;font-size:14px;font-weight:700;cursor:pointer;transition:.2s}
-.cur-btn.active{background:#e2e8f0;color:#0f172a}
+.cur-btn{padding:8px 18px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#94a3b8;font-size:14px;font-weight:700;cursor:pointer;transition:.2s}
+.cur-btn.active{background:#334155;color:#f1f5f9}
 .results{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
-.res-item{background:#f8f7f4;border:1px solid #e2e8f0;border-radius:10px;padding:16px;text-align:center}
-.res-item .val{font-size:26px;font-weight:700;color:#0f172a}
-.res-item .lbl{font-size:12px;color:#64748b;margin-top:4px;text-transform:uppercase;letter-spacing:.04em}
-.res-person{background:#f8f7f4;border:1px solid #0f172a;border-radius:10px;padding:16px;text-align:center;margin-top:12px}
+.res-item{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:16px;text-align:center}
+.res-item .val{font-size:26px;font-weight:700;color:#4f46e5}
+.res-item .lbl{font-size:12px;color:#94a3b8;margin-top:4px;text-transform:uppercase;letter-spacing:.04em}
+.res-person{background:#0f172a;border:1px solid #4f46e5;border-radius:10px;padding:16px;text-align:center;margin-top:12px}
 .res-person .val{font-size:32px;font-weight:800;color:#34d399}
-.res-person .lbl{font-size:13px;color:#64748b;margin-top:4px}
+.res-person .lbl{font-size:13px;color:#94a3b8;margin-top:4px}
 .custom-tip-wrap{margin-top:8px}
 </style>
   <meta name="theme-color" content="#1a1a2e" />
-  <style id="tabutility-brand">
-/* empty ad slots: reserve space, no bordered box */
-.ad-banner,.ad-slot,.ad-container{background:transparent!important;border:none!important;border-bottom:none!important;box-shadow:none!important}
+  <style id="tabutility-brand-v2">
+/* Canonical dark-surface spec (STYLE.md): indigo accent, white text on indigo */
+.btn,.toggle-btn.active,button.active{color:#fff!important}
+nav .brand{color:#fff}
+nav a:hover{color:#818cf8}
+input:focus,select:focus,textarea:focus{border-color:#818cf8!important}
 /* AdSense not yet approved: hide all ad frames (container min-height still reserves space). Remove these two lines after approval. */
 ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibility:hidden!important}
-nav .brand{color:#0f172a}
-body{-webkit-font-smoothing:antialiased}
 </style>
 </head>
 <body>
@@ -100,14 +100,14 @@ body{-webkit-font-smoothing:antialiased}
       <button class="tip-btn" onclick="setTip(25,this)">25%</button>
     </div>
     <div class="custom-tip-wrap">
-      <input type="number" id="tip-custom" class="no-prefix" placeholder="Custom tip %" min="0" max="100" step="1" oninput="setCustomTip()" style="width:100%;background:#f8f7f4;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;color:#0f172a;font-size:15px;outline:none;margin-top:8px"/>
+      <input type="number" id="tip-custom" class="no-prefix" placeholder="Custom tip %" min="0" max="100" step="1" oninput="setCustomTip()" style="width:100%;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px 14px;color:#f1f5f9;font-size:15px;outline:none;margin-top:8px"/>
     </div>
 
     <label>Number of People</label>
     <div style="display:flex;align-items:center;gap:12px">
-      <button onclick="changePeople(-1)" style="width:40px;height:40px;border-radius:8px;border:1px solid #e2e8f0;background:#f8f7f4;color:#0f172a;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center">−</button>
+      <button onclick="changePeople(-1)" style="width:40px;height:40px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f1f5f9;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center">−</button>
       <span id="people-count" style="font-size:22px;font-weight:700;min-width:32px;text-align:center">2</span>
-      <button onclick="changePeople(1)" style="width:40px;height:40px;border-radius:8px;border:1px solid #e2e8f0;background:#f8f7f4;color:#0f172a;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center">+</button>
+      <button onclick="changePeople(1)" style="width:40px;height:40px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f1f5f9;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center">+</button>
     </div>
 
     <div class="results">
@@ -126,35 +126,35 @@ body{-webkit-font-smoothing:antialiased}
     
 
 <!-- embed-widget -->
-<div style="max-width:640px;margin:0 auto 32px;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px">
-  <h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
+<div style="max-width:640px;margin:0 auto 32px;background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px">
+  <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
   <p style="font-size:13px;color:#64748b;margin-bottom:12px">Add this Tip & Bill Splitter to your website or blog for free — just paste this code:</p>
-  <div style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-family:'Inter',monospace;font-size:12px;color:#7dd3fc;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://tip-calculator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Tip &amp; Bill Splitter by Tabutility&quot;&gt;&lt;/iframe&gt;
+  <div style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;color:#818cf8;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://tip-calculator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Tip &amp; Bill Splitter by Tabutility&quot;&gt;&lt;/iframe&gt;
 &lt;p style=&quot;font-size:12px&quot;&gt;&lt;a href=&quot;https://tip-calculator.tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tip &amp; Bill Splitter&lt;/a&gt; by &lt;a href=&quot;https://tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tabutility&lt;/a&gt;&lt;/p&gt;</div>
-  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#0f172a;color:#f8f7f4;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
+  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#4f46e5;color:#0f172a;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
   <span style="font-size:11px;color:#475569;margin-left:12px">Free to use — the credit link helps others find the tool</span>
 </div>
-<div style="margin:0 auto 24px;max-width:640px;background:#ffffff;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #e2e8f0" onclick="window.open('https://www.amazon.co.uk/s?k=budgeting%20frugal%20living%20books&tag=tabutility-20','_blank','noopener noreferrer')" title="Dining out on a budget?">
+<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.co.uk/s?k=budgeting%20frugal%20living%20books&tag=tabutility-20','_blank','noopener noreferrer')" title="Dining out on a budget?">
   <span style="font-size:28px;flex-shrink:0">📚</span>
   <div style="min-width:0">
-    <div style="font-size:13px;font-weight:700;color:#0f172a;margin-bottom:3px">Dining out on a budget?</div>
-    <div style="font-size:12px;color:#64748b">Browse budgeting & frugal living books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
+    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Dining out on a budget?</div>
+    <div style="font-size:12px;color:#94a3b8">Browse budgeting & frugal living books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
     <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
   </div>
 </div>
-<h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+<h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
-      <a href="https://percentage-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#0f172a">Percentage Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div>
+      <a href="https://percentage-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Percentage Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
       </a>
-      <a href="https://discount-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#0f172a">Discount Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div>
+      <a href="https://discount-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Discount Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
       </a>
-      <a href="https://sales-tax-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#0f172a">Sales Tax Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div>
+      <a href="https://sales-tax-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Sales Tax Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
       </a>
-      <a href="https://hourly-to-salary.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#0f172a">Hourly to Salary</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div>
+      <a href="https://hourly-to-salary.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Hourly to Salary</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
       </a>
     </div>
   </div>
@@ -162,22 +162,22 @@ body{-webkit-font-smoothing:antialiased}
 
 <div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:8px;margin-bottom:24px;padding:0 16px">
   <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
-    <h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
     <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">How much should I tip?</div>
-      <div style="font-size:13px;color:#64748b;line-height:1.5">15–20% is standard in the US; 10–12.5% is common in the UK.</div>
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">How much should I tip?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">15–20% is standard in the US; 10–12.5% is common in the UK.</div>
     </div>
     <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">Can I split between multiple people?</div>
-      <div style="font-size:13px;color:#64748b;line-height:1.5">Yes — enter the number of people and it calculates each person's share.</div>
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Can I split between multiple people?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — enter the number of people and it calculates each person's share.</div>
     </div>
     <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">Is this free?</div>
-      <div style="font-size:13px;color:#64748b;line-height:1.5">Yes — completely free, no sign-up needed.</div>
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this free?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — completely free, no sign-up needed.</div>
     </div>
     <div style="padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">Works on mobile?</div>
-      <div style="font-size:13px;color:#64748b;line-height:1.5">Yes — works on any device.</div>
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Works on mobile?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — works on any device.</div>
     </div>
   </div>
 </div>
@@ -256,11 +256,11 @@ function calculate() {
   }
 })();
 </script>
-<footer style="border-top:1px solid #e2e8f0;background:#ffffff;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;color:#64748b;line-height:1.8">
-<div style="font-weight:700;color:#0f172a;font-size:15px">⚡ Tabutility</div>
+<footer style="background:#1a1a2e;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:13px;color:#94a3b8;line-height:1.8">
+<div style="font-weight:700;color:#fff;font-size:15px">⚡ Tabutility</div>
 <div>Free, private, browser-based tools. No sign-up, no tracking.</div>
-<div><a href="https://tabutility.com" style="color:#0f172a;font-weight:600;text-decoration:none">All Tools</a> · <a href="https://tabutility.com/blog/" style="color:#64748b;text-decoration:none">Blog</a> · <a href="https://tabutility.com/#about" style="color:#64748b;text-decoration:none">About</a></div>
-<div style="margin-top:6px;color:#94a3b8">© 2026 Tabutility</div>
+<div><a href="https://tabutility.com" style="color:#818cf8;font-weight:600;text-decoration:none">All Tools</a> · <a href="https://tabutility.com/blog/" style="color:#94a3b8;text-decoration:none">Blog</a> · <a href="https://tabutility.com/#about" style="color:#94a3b8;text-decoration:none">About</a></div>
+<div style="margin-top:6px;color:#64748b">© 2026 Tabutility</div>
 </footer>
 </body>
 </html>
