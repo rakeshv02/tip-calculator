@@ -265,6 +265,93 @@ function calculate() {
   }
 })();
 </script>
+
+<section id="seo-content">
+  <style>
+    #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:'Segoe UI',system-ui,Arial,sans-serif;color:#334155;line-height:1.7}
+    #seo-content h2{font-size:1.35rem;color:#0f172a;margin:2rem 0 .75rem}
+    #seo-content h3{font-size:1.05rem;color:#0f172a;margin:1.25rem 0 .5rem}
+    #seo-content p,#seo-content li{font-size:.95rem}
+    #seo-content ul{padding-left:1.4rem;margin:.5rem 0}
+    #seo-content .example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    @media(prefers-color-scheme:dark){#seo-content{color:#cbd5e1}#seo-content h2,#seo-content h3{color:#f1f5f9}#seo-content .example{background:#1e293b;border-color:#334155}}
+  </style>
+  <h2>How to Use the Tip & Bill Splitter</h2>
+  <p>The Tip and Bill Splitter calculates the tip amount on any restaurant bill and divides the total evenly among any number of people. Enter the total bill amount, choose a tip percentage (or enter a custom amount), and set the number of people splitting the bill. The calculator instantly shows the tip amount, the grand total with tip, and the per-person share — all three figures together so the table can settle up in seconds without any mental arithmetic. You can also split just the tip while letting people pay their individual portions separately, or handle uneven splits where one person owes more.</p>
+  <p>Tipping customs vary significantly by country and culture. In the United States, a tip of 15–20% is standard at sit-down restaurants, with 20–25% expected for excellent service or in major cities. Tipping on takeaway orders is discretionary but increasingly common at 10–15%. In the UK, tipping is more optional — 10–15% is appreciated for table service but not obligatory, and many people check whether a service charge is already included before adding extra. In many European countries (France, Germany, Italy), tipping at 5–10% or simply rounding up is the norm, and large tips can occasionally be seen as unusual. This calculator supports any tip percentage so you can follow the conventions of the country you are in.</p>
+  <p>Bill splitting can become complicated quickly at large tables, especially when people order different amounts and want to pay only for what they had. The simplest approach — dividing the total equally — works well when everyone orders approximately the same amount and avoids the awkwardness of itemising each person's order. Equal splitting also spreads the tip proportionally. If the group prefers to pay individually, a useful approach is for everyone to pay their own food/drink total plus their share of any shared items (like starters or wine), then split the tip equally across the table. This calculator handles the equal-split case clearly and instantly, which covers the majority of social dining scenarios.</p>
+
+  <h2>Common Scenarios</h2>
+  <ul>
+    <li><strong>Restaurant dinner:</strong> Total bill £180, 15% tip, 4 people = £51.75 per person including tip.</li>
+    <li><strong>Large group:</strong> Bill £450, 18% tip, 9 people = £59 per person.</li>
+    <li><strong>Just the tip:</strong> Calculate what 20% of a $73 tab comes to before deciding whether to add it.</li>
+    <li><strong>Uneven numbers:</strong> One person has a coupon or pays more — enter the adjusted amount after their discount.</li>
+    <li><strong>Service already included:</strong> If the bill says "service included" or adds a 12.5% discretionary charge, enter 0% tip (or a small additional top-up for exceptional service).</li>
+  </ul>
+
+  <div class="example"><strong>Example:</strong> Bill £135, 15% tip, 5 people. Tip = £135 × 0.15 = £20.25. Total = £155.25. Per person = <strong>£31.05</strong>.</div>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>How much should I tip at a restaurant?</h3>
+  <p>In the US, 15–20% is the standard range for sit-down restaurant service; 20%+ for excellent service. In the UK, 10–15% is typical but optional — always check whether a service charge is already included. In continental Europe, 5–10% or rounding up the bill is more common. For takeaway or counter service, tipping is discretionary.</p>
+  <h3>Should I tip on the pre-tax or post-tax amount?</h3>
+  <p>In the US, tipping on the pre-tax (subtotal) amount is technically correct and is what restaurants expect, but many people find it easiest to tip on the total bill as displayed. The difference is usually small: on a $100 pre-tax bill with 10% tax, tipping 20% on the $110 total is only $2 more than on the pre-tax amount.</p>
+  <h3>What does "service charge included" mean on a UK restaurant bill?</h3>
+  <p>UK restaurants often add a discretionary service charge of 10–15% to the bill, particularly for groups. You are not legally obliged to pay it, but it is the most direct way to tip the team. If the charge is there, you do not need to leave an additional cash tip unless you want to. Always check whether the service charge goes directly to staff — it does in most cases but not all.</p>
+  <h3>How do I split a bill unevenly?</h3>
+  <p>For uneven splits, have each person calculate their own food and drink total, then divide the shared items and tip equally. Alternatively, one person can pay the full bill and collect from others using payment apps (Monzo, Revolut, PayPal, Venmo) to avoid handling cash. The tip on unevenly split bills is fairest when it is also split equally regardless of who ordered what.</p>
+  <h3>Is 20% a good tip in the US?</h3>
+  <p>Yes. 20% is widely considered the standard "good service" tip in the US, making the mental maths easy (move the decimal one place left, then double it). For exceptional service or in high cost-of-living cities like New York or San Francisco, 22–25% is not unusual. For poor or inattentive service, 15% is the minimum most diners consider acceptable.</p>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much should I tip at a restaurant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the US, 15–20% is standard at sit-down restaurants. In the UK, 10–15% is typical but optional — check if a service charge is already included. In continental Europe, 5–10% or rounding up is common."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I tip on the pre-tax or post-tax amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically tip on the pre-tax (subtotal) amount in the US, but many people tip on the total. The difference is small: on a $100 pre-tax bill, tipping 20% on the $110 post-tax total is only $2 more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does service charge included mean on a UK restaurant bill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UK restaurants often add a discretionary 10–15% service charge. You are not legally obliged to pay it, but it is the most direct way to tip the team. You do not need to leave an extra tip if it is already on the bill."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I split a bill unevenly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Have each person total their own food and drink, then split shared items and the tip equally. Payment apps like Monzo, Revolut, or Venmo make collecting from others straightforward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 20% a good tip in the US?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. 20% is the standard good-service tip in the US. For exceptional service or in high cost-of-living cities, 22–25% is common. For poor service, 15% is the minimum most diners consider acceptable."
+      }
+    }
+  ]
+}
+</script>
 <footer style="background:#1a1a2e;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:13px;color:#94a3b8;line-height:1.8">
 <div style="font-weight:700;color:#fff;font-size:15px">⚡ Tabutility</div>
 <div>Free, private, browser-based tools. No sign-up, no tracking.</div>
